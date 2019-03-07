@@ -1,0 +1,14 @@
+<div class="list">
+   <h2>Accionlabs</h2>
+   <ngx-datatable
+   class="material"
+   [rows]="rows"
+   [columns]="[{name:'User Id',prop:'userId' },{name:'Title', prop:'title'},{name:'Description',prop:'body'}]"
+   [columnMode]="'force'"
+   [headerHeight]="50"
+   [footerHeight]="50"
+   [rowHeight]="'auto'"
+   [limit]="10">
+       
+   </ngx-datatable>
+</div>
