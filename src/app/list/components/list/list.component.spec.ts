@@ -13,7 +13,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HttpModule } from '@angular/http';
 import { ListService } from '../../services/list.service';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { ColumnList } from '../../models/columnList';
+import { ColumnList } from '../../models/ColumnList';
 import { ListComponent } from './list.component';
 import { By } from '@angular/platform-browser';
 

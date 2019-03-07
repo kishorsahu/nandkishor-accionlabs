@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 import { ListService } from '../../services/list.service';
-import { ColumnList } from '../../models/columnList';
+import { ColumnList } from '../../models/ColumnList';
 
 @Component({
 	selector: 'app-list',
