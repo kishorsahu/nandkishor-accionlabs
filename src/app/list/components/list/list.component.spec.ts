@@ -5,7 +5,8 @@ import {
   Output,
   EventEmitter,
   ViewChild,
-  TemplateRef
+  TemplateRef,
+  CUSTOM_ELEMENTS_SCHEMA
 } from '@angular/core';
 
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
@@ -14,8 +15,9 @@ import { HttpModule } from '@angular/http';
 import { ListService } from '../../services/list.service';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { ColumnList } from '../../models/ColumnList';
-import { ListComponent } from './list.component';
+//import { ListComponent } from './list.component';
 import { By } from '@angular/platform-browser';
+import { ListComponent } from 'src/app/list/components/list/list.component';
 
 
 describe('ListComponent', () => {
@@ -29,8 +31,9 @@ describe('ListComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, HttpModule, NgxDatatableModule],
-      providers: [ListService],
-      declarations: [ ListComponent ]
+      //providers: [ListService],
+      declarations: [ ListComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
@@ -43,7 +46,7 @@ describe('ListComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component.rows).toBeTruthy();
     expect(columnSpy).toBeDefined();
   });
 
